@@ -61,9 +61,19 @@ a {
   color: white;
 }
 
+@media screen and (max-width: 830px) {
+  html {
+    font-size: 50%;
+  }
+}
 @media screen and (max-width: 550px) {
   html {
     font-size: 45%;
+  }
+}
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 38%;
   }
 }
 /*contact*/
@@ -93,6 +103,7 @@ a {
   margin-top: 8rem;
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
+  font-size: 3rem;
 }
 .form-wrapper input {
   padding: 1rem 3rem;
@@ -113,6 +124,19 @@ a {
 @media screen and (max-width: 933px) {
   .form-wrapper {
     width: 95%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .form-wrapper label {
+    font-size: 2.5rem;
+  }
+  .form-wrapper button {
+    font-size: 2.5rem;
+  }
+
+  .name-form,
+.email-form {
+    padding: 2rem 0rem;
   }
 }
 /*benefits*/
@@ -160,6 +184,20 @@ a {
   background: #27394e;
 }
 
+@media screen and (max-width: 1166px) {
+  .benefits-header {
+    min-height: 10vh;
+  }
+
+  .card {
+    min-height: 28vh;
+  }
+}
+@media screen and (max-width: 400px) {
+  .card p {
+    font-size: 2.5rem;
+  }
+}
 /*nav and hero*/
 #main-header {
   background: #131c27;
@@ -209,14 +247,71 @@ nav ul {
   padding: 5rem;
 }
 
+.burger {
+  display: none;
+}
+
 /*media queries*/
 @media screen and (max-width: 933px) {
   nav {
-    text-align: center;
+    flex-wrap: nowrap;
   }
 
   #logo {
     padding: 1rem;
+  }
+
+  .burger {
+    position: relative;
+    display: block;
+    cursor: pointer;
+  }
+  .burger span {
+    padding: 0.2rem 2rem;
+    background: white;
+    margin: 0.5rem 0rem;
+    display: block;
+    transition: all 0.7s ease;
+  }
+
+  .nav-links {
+    background: #131c27;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.7s ease;
+  }
+  .nav-links a {
+    color: white;
+    font-size: 4rem;
+    text-decoration: underline;
+  }
+
+  .nav-open {
+    transform: translateX(-100%);
+  }
+
+  .toggle .line1 {
+    transform: rotateZ(45deg) translateY(300%);
+    background: white;
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotateZ(-45deg) translateY(-300%);
+    background: white;
+  }
+
+  .stop-scrolling {
+    height: 100%;
+    overflow-y: hidden;
   }
 }
 /*locations*/
@@ -270,6 +365,11 @@ nav ul {
   }
   to {
     transform: translate(0%, 0%);
+  }
+}
+@media screen and (max-width: 1360px) {
+  .cloud {
+    height: 50rem;
   }
 }
 /*media queries*/

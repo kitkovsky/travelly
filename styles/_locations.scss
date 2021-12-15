@@ -56,15 +56,23 @@
   }
 }
 
+@media screen and (max-width: 1360px) {
+  .cloud {
+    height: 50rem;
+  }
+}
+
 /*media queries*/
 @media screen and (max-width: 933px) {
   .cloud {
     height: 40rem;
   }
 
-  .locations-header h3 {
-    background: rgba(19, 28, 39, 0.9);
-    -webkit-text-fill-color: white;
-    padding: 1rem;
+  .locations-header {
+    h3 {
+      background: rgba(19, 28, 39, 0.9);
+      -webkit-text-fill-color: white;
+      padding: 1rem;
+    }
   }
 }

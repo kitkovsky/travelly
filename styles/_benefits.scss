@@ -45,3 +45,22 @@
 .card-icon {
   background: #27394e;
 }
+
+// media queries
+@media screen and (max-width: 1166px) {
+  .benefits-header {
+    min-height: 10vh;
+  }
+
+  .card {
+    min-height: 28vh;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card {
+    p {
+      font-size: 2.5rem;
+    }
+  }
+}

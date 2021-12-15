@@ -50,13 +50,73 @@ nav {
   }
 }
 
+.burger {
+  display: none;
+}
+
 /*media queries*/
 @media screen and (max-width: 933px) {
   nav {
-    text-align: center;
+    flex-wrap: nowrap;
   }
 
   #logo {
     padding: 1rem;
+  }
+
+  // burger stuff
+  .burger {
+    position: relative;
+    display: block;
+    cursor: pointer;
+
+    span {
+      padding: 0.2rem 2rem;
+      background: white;
+      margin: 0.5rem 0rem;
+      display: block;
+      transition: all 0.7s ease;
+    }
+  }
+
+  .nav-links {
+    background: #131c27;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.7s ease;
+
+    a {
+      color: white;
+      font-size: 4rem;
+      text-decoration: underline;
+    }
+  }
+
+  .nav-open {
+    transform: translateX(-100%);
+  }
+
+  .toggle .line1 {
+    transform: rotateZ(45deg) translateY(300%);
+    background: white;
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotateZ(-45deg) translateY(-300%);
+    background: white;
+  }
+
+  .stop-scrolling {
+    height: 100%;
+    overflow-y: hidden;
   }
 }
