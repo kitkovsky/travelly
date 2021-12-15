@@ -1,0 +1,62 @@
+/*nav and hero*/
+#main-header {
+  background: #131c27;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+nav {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  min-height: 10vh;
+  padding: 2rem;
+  width: 90%;
+
+  ul {
+    align-items: center;
+    display: flex;
+    flex: 1 1 40rem;
+    justify-content: space-around;
+    list-style: none;
+  }
+}
+
+#logo {
+  flex: 2 1 40rem;
+  font-family: "Pattaya", sans-serif;
+  font-weight: 400;
+}
+
+#hero {
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), transparent),
+    url("../img/landing-page.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 90vh;
+  text-align: center;
+
+  h3 {
+    padding: 5rem;
+  }
+}
+
+/*media queries*/
+@media screen and (max-width: 933px) {
+  nav {
+    text-align: center;
+  }
+
+  #logo {
+    padding: 1rem;
+  }
+}

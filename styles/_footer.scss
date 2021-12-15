@@ -1,0 +1,38 @@
+/*footer*/
+footer {
+  color: white;
+  background: rgb(19, 28, 39);
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex: 1 1 40rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  h5 {
+    flex: 1 1 40rem;
+  }
+}
+
+.footer-wrapper {
+  display: flex;
+  padding: 2rem;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  min-height: 10vh;
+  flex-wrap: wrap;
+}
+
+/*media queries*/
+@media screen and (max-width: 933px) {
+  footer {
+    text-align: center;
+  }
+
+  footer h5 {
+    padding-bottom: 3rem;
+  }
+}
